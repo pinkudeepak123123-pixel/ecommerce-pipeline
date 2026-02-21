@@ -13,7 +13,6 @@ analyzes sales trends by product and region.
 ## Current Progress
 - Stage 1: Data generation (Python + Faker) ✅
 - Stage 2: Sales analysis (Pandas) ✅
-- Stage 3: Database loading (coming soon)
 - Stage 4: Cloud deployment on AWS (coming soon)
 
 ## Key Insight From Data
@@ -59,7 +58,7 @@ it contains 1.order_id(primary key)
             4.amount
             5.date 
                                     
-so we created three relational tables which are indepent of eachother . 
+so we created three relational tables which are related to eachother.
 but these tables are empty right so to fill these tables we need to write another set of codes 
 which we did in populate_tables.py 
 
