@@ -19,8 +19,3 @@ analyzes sales trends by product and region.
 ## Key Insight From Data
 - Top selling product: Monitor (¥795,137 total revenue)
 - Top city: Sapporo (¥800,227 total revenue)
-
-
-git add .
-git commit -m "Add README"
-git push
