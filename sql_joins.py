@@ -1,7 +1,7 @@
 import sqlite3
 conn = sqlite3.connect('ecommerce.db')
 cursor = conn.cursor()
-
+#which category generates highest revenue#
 cursor.execute("""
     SELECT p.category, l.city, SUM(f.amount) as total_revenue
     FROM fact_orders f
@@ -11,6 +11,10 @@ cursor.execute("""
     GROUP BY p.category, l.city
     ORDER BY total_revenue DESC
 """)
+rows=cursor.fetchall()
+for row in rows:
+       print(row)
+
 
 
     ### which city has highest average order amount for audio products ? ###
@@ -28,7 +32,7 @@ cursor.execute("""
 
 
 
-
+# highest order per city #
 cursor.execute( """ 
     SELECT l.city, MAX(f.amount) as highest_order
 FROM fact_orders f
@@ -40,7 +44,7 @@ rows = cursor.fetchall()
 for row in rows:
     print(row) 
 
-
+## total revenue per city 
 cursor.execute("""SELECT l.city ,  SUM(f.amount) as total_revenue 
                FROM fact_orders f
                JOIN dim_locations l ON f.location_id = l.location_id
